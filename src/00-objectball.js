@@ -123,27 +123,28 @@ function homeTeamName() {
   console.log(homeTeamName())
 
 //   //Todd's ok? logic Accepts player name, returns points scored. 
-//   function numPointsScored(name) {
-//       let object = gameObject();
-//         let homePlayers = Object.keys(object['home']['players'])
-//         //let awayPlayers = Object.keys(object[away][players])
-//         let ticker = homePlayers.indexOf(name)
-//         if (ticker === -1) {
-//             let result = object['away']['players'][name]['points']
-//             return result
-//         } else {
-//             let result = object['home']['players'][name]['points']
-//             return result
-//         };
+  function numPointsScored(name) {
+      let object = gameObject();
+        let homePlayers = Object.keys(object['home']['players'])
+        //let awayPlayers = Object.keys(object[away][players])
+        let ticker = homePlayers.indexOf(name)
+        if (ticker === -1) {
+            let result = object['away']['players'][name]['points']
+            return result
+        } else {
+            let result = object['home']['players'][name]['points']
+            return result
+        };
         
-//   };
+  };
 //   console.log(numPointsScored());
-
+//---------------------------
+//function takes player name and returns shoe size.
   function shoeSize(name) {
     let object = gameObject();
-      let homePlayers = Object.keys(object['home']['players'])
+      let sizes = Object.keys(object['home']['players'])
       //let awayPlayers = Object.keys(object[away][players])
-      let ticker = homePlayers.indexOf(name)
+      let ticker = sizes.indexOf(name)
       if (ticker === -1) {
           let result = object['away']['players'][name]['shoe']
           return result
@@ -153,7 +154,55 @@ function homeTeamName() {
       };
       
 };
-console.log(numPointsScored());
+
+//--------------------------------
+// function takes team name and returns team colors
+function teamColors(name) {
+    let object = gameObject();
+      let colors = (object['home']['teamName'])
+      //let awayPlayers = Object.keys(object[away][players])
+      let ticker = colors.indexOf(name)
+      if (ticker === -1) {
+          let result = object['away']['colors']
+          return result
+      } else {
+          let result = object['home']['colors']
+          return result
+      };
+    
+};
+
+//-------------------------------
+
+function teamNames() {
+    let object = gameObject();
+    let result = [];
+    result[0] = object['home']['teamName'];
+    result[1] = object['away']['teamName'];
+    return result
+};
+
+//-----------------------------
+
+function playerNumbers(team) {
+    let object = gameObject();
+    let list = [];
+    if (team === object['home']['teamName']) {
+        for (let key in object['home']['players']) {
+            list.push(object['home']['players'][key]['number'])
+            console.log(list);
+        }
+    
+    } else {
+        for (let key in object['away']['players']) {
+            list.push(object['away']['players'][key]['number'])
+        }
+    }
+    return list
+}
+
+
+
 //------------------------------
 //   function shoeSize (name) {
 //       let object = gameObject(); 
