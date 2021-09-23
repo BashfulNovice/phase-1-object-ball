@@ -122,25 +122,41 @@ function homeTeamName() {
   
   console.log(homeTeamName())
 
-//   //Todd's crap logic Accepts player name, returns points scored. 
+//   //Todd's ok? logic Accepts player name, returns points scored. 
 //   function numPointsScored(name) {
 //       let object = gameObject();
-//         let homePlayers = Object.keys(object[home][players])
+//         let homePlayers = Object.keys(object['home']['players'])
 //         //let awayPlayers = Object.keys(object[away][players])
 //         let ticker = homePlayers.indexOf(name)
 //         if (ticker === -1) {
-//             let result = object[away][players][name][points]
+//             let result = object['away']['players'][name]['points']
+//             return result
 //         } else {
-//             let result = object[home][players][name][points]
-//         }
-//         return result
+//             let result = object['home']['players'][name]['points']
+//             return result
+//         };
+        
+//   };
+//   console.log(numPointsScored());
+//------------------------------
+  function shoeSize (name) {
+      let object = gameObject(); 
+      for (let key in object) {
+          let value = object[key] 
+          console.log(object.values)
+      };
+  };
 
-//   }
+//---------------------------
 
 // function numPointsScored(name) {
-//     let pointsScored = gameObject()
-//         for (let points in pointsScored) {
-//     let value = pointsScored[points];
-//     console.log(numPointsScored(name, value));
-// }
-// }
+//         let pointsScored = gameObject();
+//             for (let key in pointsScored['home']['players']) {
+//         let value = pointsScored['home']['players'][key];
+//         if (value === name) {
+//             let result = pointsScored['home']['players'][key][points]
+//             break
+//         }
+//         console.log(numPointsScored(name, value));
+//     }
+//     }
