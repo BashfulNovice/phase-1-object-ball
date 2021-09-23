@@ -3,7 +3,7 @@ function gameObject() {
         home: {
             teamName: "Brooklyn Nets",
             colors: ["Black", "White"],
-            players: {"Alan Anderson": {
+            players: {alanAnderson: {
                         number: "0",
                         shoe: "16",
                         points: "22",
@@ -13,7 +13,7 @@ function gameObject() {
                         blocks: "1",
                         slamDunks: "1",
                     },
-                    "Reggie Evans": {
+                    reggieEvans: {
                         number: "30",
                         shoe: "14",
                         points: "12",
@@ -23,7 +23,7 @@ function gameObject() {
                         blocks: "12",
                         slamDunks: "7",
                     },
-                    "Brook Lopez": {
+                    brookLopez: {
                         number: "11",
                         shoe: "17",
                         points: "17",
@@ -33,7 +33,7 @@ function gameObject() {
                         blocks: "1",
                         slamDunks: "15",
                     },
-                    "Mason Plumlee": {
+                    masonPlumlee: {
                         number: "1",
                         shoe: "19",
                         points: "26",
@@ -43,7 +43,7 @@ function gameObject() {
                         blocks: "8",
                         slamDunks: "5",
                     },
-                    "Jason Terry": {
+                    jasonTerry: {
                         number: "31",
                         shoe: "15",
                         points: "19",
@@ -57,7 +57,7 @@ function gameObject() {
         away: {
             teamName: "Charlotte Hornets",
             colors: ["Turquoise", "Purple"],
-            players:{"Jeff Adrien": { 
+            players:{jeffAdrien: { 
                         number: "4",
                         shoe: "18",
                         points: "10",
@@ -67,7 +67,7 @@ function gameObject() {
                         blocks: "7",
                         slamDunks: "2",
                     },
-                    "Bismak Biyombo": {
+                    bismakBiyombo: {
                         number: "0",
                         shoe: "16",
                         points: "12",
@@ -77,7 +77,7 @@ function gameObject() {
                         blocks: "15",
                         slamDunks: "10",
                     },
-                    "DeSagna Diop": {
+                    deSagnaDiop: {
                         number: "2",
                         shoe: "14",
                         points: "24",
@@ -87,7 +87,7 @@ function gameObject() {
                         blocks: "5",
                         slamDunks: "5",
                     },
-                    "Ben Gordon": {
+                    benGordon: {
                         number: "8",
                         shoe: "15",
                         points: "33",
@@ -97,7 +97,7 @@ function gameObject() {
                         blocks: "1",
                         slamDunks: "0",
                     },
-                    "Brendan Haywood":{
+                    brendanHaywood:{
                         number: "33",
                         shoe: "15",
                         points: "6",
@@ -107,6 +107,10 @@ function gameObject() {
                         blocks: "5",
                         slamDunks: "12",
                     },
+            },
         },
-    },
-}}}
+    }}
+    //console.log(gameObject());
+    return gameInfo
+};
+console.log(gameObject());
