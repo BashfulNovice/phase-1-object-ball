@@ -136,3 +136,11 @@ function homeTeamName() {
 //         return result
 
 //   }
+
+function numPointsScored(name) {
+    let pointsScored = gameObject()
+        for (let points in pointsScored) {
+    let value = pointsScored[points];
+    console.log(numPointsScored(name, value));
+}
+}
