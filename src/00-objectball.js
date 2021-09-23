@@ -53,7 +53,7 @@ function gameObject() {
                         blocks: "11",
                         slamDunks: "1",
                     },
-        },
+        }},
         away: {
             teamName: "Charlotte Hornets",
             colors: ["Turquoise", "Purple"],
@@ -109,8 +109,15 @@ function gameObject() {
                     },
             },
         },
-    }}
+    }
     //console.log(gameObject());
     return gameInfo
-};
+}
 console.log(gameObject());
+
+function homeTeamName() {
+    let object = gameObject()
+    return object['home']['teamName']
+  }
+  
+  console.log(homeTeamName())
